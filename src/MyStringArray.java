@@ -117,6 +117,9 @@ public class MyStringArray implements MyList {
         // lamda expressions
         // flere metoder på et kald
 
+//        for (int i = 0; i < size; i++){
+//            System.out.println(get(i));
+//        }
 
     }
 
