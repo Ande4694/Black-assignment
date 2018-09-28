@@ -62,7 +62,7 @@ public class MyStringArray implements MyList {
 
     private void resize() {
 
-        Object[] temp = (Object[]) new Object [StringArray.length * 2];
+        Object[] temp = new Object [StringArray.length * 2];
         copy(StringArray, temp);
         StringArray = temp;
 
@@ -119,5 +119,24 @@ public class MyStringArray implements MyList {
 
 
     }
+
+    public boolean contains(Object value){
+        return indexOf(value) >=0;
+    }
+
+    public boolean isEmpty(){
+        return size ==0;
+    }
+
+    public void set(int index, Object value){
+
+        if(StringArray[index]!=null){
+
+            StringArray[index] = value;
+        } else {
+            System.out.println("naughty naughty are you trying to provoke an index out of bounds?");
+        }
+    }
 }
+
 

@@ -8,6 +8,9 @@ public interface MyList<T> {
     void print();
     String toString();
     int indexOf(T value);
+    void set(int index, T value);
+    boolean isEmpty();
+    boolean contains(T value);
 
 
 
