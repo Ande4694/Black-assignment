@@ -82,6 +82,12 @@ public class MyStringArray implements MyList {
     }
 
     @Override
+    public Object get(int index) {
+
+        return StringArray[index];
+    }
+
+    @Override
     public void remove(int index) {
         for (int i = index; i < size - 1; i++){
             StringArray[i] = StringArray[i+1];
@@ -89,20 +95,16 @@ public class MyStringArray implements MyList {
         size--;
     }
 
+
     public int indexOf(Object value){
         for(int i = 0; i<size; i++){
-            if (StringArray==value){
+            if (StringArray[i].equals(value)){
                 return i;
             }
         }
         return -1;
     }
 
-    @Override
-    public Object get(int index) {
-
-        return StringArray[index];
-    }
 
     @Override
     public int size() {
